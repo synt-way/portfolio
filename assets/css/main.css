@@ -159,7 +159,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 45px;
+  width: auto;
   margin-right: 8px;
 }
 
@@ -215,7 +216,8 @@ h6 {
 }
 
 .navmenu .logo img {
-  max-height: 32px;
+  max-height: 45px;
+  width: auto;
   margin-right: 8px;
 }
 
