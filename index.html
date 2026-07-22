@@ -40,7 +40,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+         <img src="assets/img/logo.png" alt="Syntway"> 
         <!-- <h1 class="sitename">Deepak Kumar </h1> -->
       </a>
 
@@ -516,7 +516,7 @@
                         </a>
                       </h4>
                     </div>
-                    <span class="duration">2023 - Present</span>
+                    <span class="duration"></span>
                   </div>
 
                   <div class="card-body">
@@ -771,7 +771,8 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Frequently Asked Questions</h2>
+        <!--<h2>Frequently Asked Questions</h2>-->
+        <h2>FAQs</h2>
         <p>Answers to common questions about my work and development approach.</p>
       </div><!-- End Section Title -->
 
@@ -882,8 +883,8 @@
                 </div>
                 <div class="content">
                   <h4>Email</h4>
-                  <p><a href="mailto:deepak@syntway.org">deepak@syntway.org</a></p>
-                  <p><a href="mailto:contact@syntway.org">contact@syntway.org</a></p>
+                  <p><a href="mailto:synt.way@gmail.com">synt.way@gmail.com</a></p>
+                  <p><a href="mailto:deepaksyntway@gmail.com">deepaksyntway@gmail.com</a></p>
                 </div>
               </div>
             </div>
@@ -939,7 +940,12 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Syntway</strong> <span>All Rights Reserved</span></p>
+       <p>
+  &copy; <span id="year"></span>
+  <strong class="px-1 sitename">Syntway Private Limited</strong>.
+  All Rights Reserved.
+       </p>
+        <!--<p>© <span>Copyright</span> <strong class="px-1 sitename">Syntway</strong> <span>All Rights Reserved</span></p>-->
       </div>
       <div class="social-links d-flex justify-content-center">
           <a href="https://github.com/synt-way"><i class="bi bi-github"></i></a>
@@ -969,6 +975,40 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Copy Right Script -->
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <!-- Experience Auto Update -->
+
+<script>
+function calculateDuration(startDate) {
+    const start = new Date(startDate);
+    const today = new Date();
+
+    let years = today.getFullYear() - start.getFullYear();
+    let months = today.getMonth() - start.getMonth();
+    let days = today.getDate() - start.getDate();
+
+    if (days < 0) {
+        months--;
+        const previousMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        days += previousMonth.getDate();
+    }
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    document.querySelector(".duration").textContent =
+        `${years}Year, ${months}Month, ${days}Day`;
+}
+
+// Start Date: 6 February 2023
+calculateDuration("2023-02-06");
+</script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
